@@ -7,8 +7,8 @@ include('../db.php');
 // tampung nilai yang ada di from ke variabel
 // sesuaikan variabel name yang ada di registerPage.php disetiap input
 $email = $_POST['email'];
-//$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-$password = $_POST['password']
+
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $name = $_POST['name'];
 $phonenum = $_POST['phonenum'];
 $membership = $_POST['membership'];
@@ -18,10 +18,20 @@ $query = mysqli_query($con,
 VALUES('$email', '$password', '$name', '$phonenum', '$membership')")
 or die(mysqli_error($con)); 
 // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
+
+$select = mysqli_query($con, "SELECT * FROM users WHERE email = '$email'")
+or die(mysqli_error($con));
+        if(mysqli_num_rows($select)) {
+            echo
+                '<script>
+                alert("Email harus unik"); 
+                window.history.back()
+                </script>';
+        }
 if($query){
 echo
 '<script>
-alert("Register Success");
+alert("Add Success");
 window.location = "../index.php"
 </script>';
 }else{

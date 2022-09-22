@@ -9,7 +9,7 @@ rel="stylesheet" integrit
 y="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 crossorigin="anonymous">
 <link href="../style.css" rel="stylesheet">
-<title>Login Page</title>
+<title>Login Page</title> 
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark fixed-top">
