@@ -1,4 +1,3 @@
-addMoviePage
 
 <?php
     include '../component/sidebar.php'
@@ -9,7 +8,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 0.19);" >
 
 <div class="body d-flex justify-content-between">
-    <h4>ADD LIST MOVIE</h4>
+    <h4>ADD NEW DATA MOVIES</h4>
     <a href="../page/listMoviesPage.php"> 
     <i style="color: red" class="fa fa-arrow-left fa-2x"></i></a>
 </div>

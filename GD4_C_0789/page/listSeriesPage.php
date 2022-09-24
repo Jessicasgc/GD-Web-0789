@@ -5,7 +5,9 @@ include '../component/sidebar.php'
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);" >
 <div class="body d-flex justify-content-between">
-<h4>LIST SERIES</h4><p></div>
+<h4>LIST SERIES</h4>
+<a href="../page/addSeriesPage.php?id='.$data['id'].'"> 
+    <i style="color: red" class="fa fa-plus-square fa-2x"></i></div>
 <hr>
 <table class="table ">
 <thead>
@@ -33,11 +35,15 @@ echo'
 <th scope="row">'.$no.'</th>
 <td>'.$data['name'].'</td>
 <td>'.$data['genre'].'</td>
-<td>'.$data['realease'].'</td>
+<td>'.$data['realese'].'</td>
 <td>'.$data['episode'].'</td>
 <td>'.$data['season'].'</td>
 <td>
-<a href="../process/deleteMovieProcess.php?id='.$data['id'].'"
+<a href="./editSeriesPage.php?id='.$data['id'].'"
+onClick="return confirm ( \'Are you sure want to edit this
+data?\')"> <i style="color: blue" class="fa fa-edit fa-2x"></i>
+</a>
+<a href="../process/deleteSeriesProcess.php?id='.$data['id'].'"
 onClick="return confirm ( \'Are you sure want to delete this
 data?\')"> <i style="color: red" class="fa fa-trash fa-2x"></i>
 </a>
